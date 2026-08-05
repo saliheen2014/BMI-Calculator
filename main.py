@@ -69,7 +69,7 @@ with tab2:
       button_addition=st.button("+")
       button_subtraction=st.button("-")
       button_division=st.button("/")
-      button_multiplication=st.button("*")
+      button_multiplication=st.button("x")
       
    if button_addition==True:
       st.write("Result:",float(first_number)+float(second_number)) 
