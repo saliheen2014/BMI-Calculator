@@ -1,34 +1,34 @@
 import streamlit as st
+tab1,tab2=st.tabs(["Bmi Calculator","Calculator"])
 
-
-
-st.title("BMI Calculator")
-col_1,col_2,=st.columns(2)
-with col_1:
+with tab1:
+ st.title("BMI Calculator")
+ col_1,col_2,=st.columns(2)
+ with col_1:
     options=st.selectbox("Convert:",
                      {'feet','lbs'})
     number=st.number_input("") 
     number=float(number)
     
-with col_2:
+ with col_2:
     options_2=st.selectbox('To:',
                            {'meters','kg',})
      
 
-if options=="feet" and options_2=="meters":
+ if options=="feet" and options_2=="meters":
     length=number*0.3048
     answer=st.write("Result",round(length,3))
 
-if options=="lbs" and options_2=="kg":
+ if options=="lbs" and options_2=="kg":
     weight=number*0.45359237
     st.write("Result",round(weight,3))  
     
 
 
-Height = st.number_input("Enter height in m")
-Weight = st.number_input("Enter weight in kg")
-btn_2=st.button("Calculate") 
-if Height and Weight:
+ Height = st.number_input("Enter height in m")
+ Weight = st.number_input("Enter weight in kg")
+ btn_2=st.button("Calculate") 
+ if Height and Weight:
     try:
         h = float(Height)
         w = float(Weight)
@@ -56,6 +56,32 @@ if Height and Weight:
 
     except ValueError:
         st.error("Please enter valid numbers for height and weight.")
+with tab2:
+   st.title("Calculator")
+   st.write("Addition is (+), Subtraction is (-)")
+   st.write("Division is (/), Multiplication is (*),")
+   st.write("Square=('2')")
+   st.write("First type in numbers then press operator")
 
+   Numbers=st.columns(2)
+   with Numbers[0]:
+      first_number=st.number_input("First number")
+      second_number=st.number_input("Second number")
+      
+   with Numbers[1]:
+      button_addition=st.button("+")
+      button_subtraction=st.button("-")
+      button_division=st.button("/")
+      button_multiplication=st.button("*")
+      button_square=st.button("2")
+   if button_addition==True:
+      st.write("Result:",float(first_number)+float(second_number)) 
+   if button_subtraction==True:
+      st.write("Result:",float(first_number)-float(second_number))
+   if button_division==True:
+      st.write("Result:",float(first_number)/float(second_number)) 
+   if button_multiplication==True:
+      st.write("Result:",float(first_number)*float(second_number))
+   if button_square==True:
+      st.write("Result:",float(first_number)**2)    
 
-    
