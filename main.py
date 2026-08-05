@@ -3,13 +3,15 @@ st.write("BMI Calculator")
 
 Height=st.text_input("Enter height in m")
 Weight=st.text_input("Enter weight in kg")
-
+st.write("BMI Calculator")
 if Height and Weight:  # Only calculate when both fields are filled
     try:
         h = float(Weight)
         w = float(Height)
         bmi = h / (w ** 2)
-        st.write("BMI:", bmi)
+        if btn_2==True:
+          st.write("BMI:", round(bmi, 2))
+
     except ValueError:
         st.error("Please enter valid numbers for height and weight.")
     if bmi<18.5:
