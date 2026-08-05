@@ -58,10 +58,7 @@ with tab1:
         st.error("Please enter valid numbers for height and weight.")
 with tab2:
    st.title("Calculator")
-   st.write("Addition is (+), Subtraction is (-)")
-   st.write("Division is (/), Multiplication is (*),")
-   st.write("Square=('2')")
-   st.write("First type in numbers then press operator")
+   
 
    Numbers=st.columns(2)
    with Numbers[0]:
@@ -73,7 +70,7 @@ with tab2:
       button_subtraction=st.button("-")
       button_division=st.button("/")
       button_multiplication=st.button("*")
-      button_square=st.button("2")
+      
    if button_addition==True:
       st.write("Result:",float(first_number)+float(second_number)) 
    if button_subtraction==True:
@@ -82,6 +79,5 @@ with tab2:
       st.write("Result:",float(first_number)/float(second_number)) 
    if button_multiplication==True:
       st.write("Result:",float(first_number)*float(second_number))
-   if button_square==True:
-      st.write("Result:",float(first_number)**2)    
+   
 
