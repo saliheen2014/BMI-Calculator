@@ -1,10 +1,4 @@
 import streamlit as st
-st.title("Hello World")
-st.subheader("I am Umar")
-name=st.text_input("Type your name")
-btn=st.button("Greet")
-if btn==True:
-    st.write("Hello", name)
 st.write("BMI Calculator")
 
 Height=st.text_input("Enter height in m")
