@@ -47,7 +47,7 @@ with tab1:
 
         elif 25 <= bmi <= 29.9:
             st.write("OVERWEIGHT")
-
+            st.write("https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/weight-loss/art-20047752")
         elif bmi >= 30:
             st.write("OBESITY")
 
