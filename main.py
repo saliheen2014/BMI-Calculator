@@ -3,7 +3,6 @@ tab1,tab2=st.tabs(["Bmi Calculator","Calculator"])
 
 with tab1:
  st.title("BMI Calculator")
- st.sidebar(" ")
  col_1,col_2,=st.columns(2)
  with col_1:
     options=st.selectbox("Convert:",
