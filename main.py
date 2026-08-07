@@ -57,7 +57,8 @@ with tab1:
     except ValueError:
         st.error("Please enter valid numbers for height and weight.")
 with tab2:
-   st.title("Calculator")
+ st.set_page_config(page_title="Calculator 📅 ")
+ st.title("Calculator")
    
 
    Numbers=st.columns(2)
