@@ -61,7 +61,7 @@ with tab2:
  st.title("Calculator")
    
 
-   Numbers=st.columns(2)
+  Numbers=st.columns(2)
    with Numbers[0]:
       first_number=st.number_input("First number")
       second_number=st.number_input("Second number")
