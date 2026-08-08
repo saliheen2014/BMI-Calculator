@@ -220,9 +220,9 @@ if options == "Calculator":
         st.success(f"Result: {first_number * 3.1415926535}")
 if options=="Background Color":
     # 🎨 Universal Background Color Picker
-bg_color = st.sidebar.color_picker("Pick a background color", "#F5F5F5")
+ bg_color = st.sidebar.color_picker("Pick a background color", "#F5F5F5")
 
-st.markdown(
+ st.markdown(
     f"""
     <style>
         body {{
