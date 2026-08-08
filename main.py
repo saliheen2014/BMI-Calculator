@@ -36,13 +36,16 @@ with st.sidebar:
         bg = "#F5F5F5"
         text = "black"
 
-# Apply theme globally
+# ============================
+# FIXED CSS — THIS MAKES BACKGROUND CHANGE
+# ============================
+
 st.markdown(
     f"""
     <style>
-        body {{
-            background-color: {bg};
-            color: {text};
+        .stApp {{
+            background-color: {bg} !important;
+            color: {text} !important;
         }}
     </style>
     """,
