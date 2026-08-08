@@ -220,6 +220,7 @@ Even individuals with a normal BMI can have elevated health risks if their waist
    st.markdown("""
 
 Health Significance
+
 Waist circumference reflects abdominal fat, including visceral fat, which surrounds internal organs and is metabolically active. High levels of visceral fat are linked to:
 
 Increased risk of type 2 diabetes
@@ -227,9 +228,6 @@ High blood pressure
 High cholesterol
 Heart disease
 Fatty liver disease 
-WebMD
-WebMD
-+2
 
 Even individuals with a normal BMI can have elevated health risks if their waist circumference is high 
 
