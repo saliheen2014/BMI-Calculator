@@ -219,14 +219,45 @@ if options == "Calculator":
     if button_pi:
         st.success(f"Result: {first_number * 3.1415926535}")
 if options=="Background Color":
-    # 🎨 Universal Background Color Picker
- bg_color = st.sidebar.color_picker("Pick a background color", "#F5F5F5")
 
- st.markdown(
+    st.sidebar.header("🎛 Theme Controller")
+
+    theme = st.selectbox(
+        "Choose a theme:",
+        ["Default", "Light", "Dark", "Ocean Blue", "Forest Green", "Custom Color"]
+    )
+
+    if theme == "Light":
+        bg = "#FFFFFF"
+        text = "black"
+
+    elif theme == "Dark":
+        bg = "#000000"
+        text = "white"
+
+    elif theme == "Ocean Blue":
+        bg = "#D0E8FF"
+        text = "black"
+
+    elif theme == "Forest Green":
+        bg = "#DFFFE0"
+        text = "black"
+
+    elif theme == "Custom Color":
+        bg = st.color_picker("Pick any background color", "#F5F5F5")
+        text = "black"
+
+    else:
+        bg = "#F5F5F5"
+        text = "black"
+
+# Apply theme
+st.markdown(
     f"""
     <style>
         body {{
-            background-color: {bg_color};
+            background-color: {bg};
+            color: {text};
         }}
     </style>
     """,
