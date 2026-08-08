@@ -98,7 +98,7 @@ with tab3:
    st.title("Calculator 📅")
   
    st.subheader("Basic Operations")
-   st.write("Choose an operator and enter your numbers.")
+   st.write("Type number then press operator.")
 
    col1, col2, col3, col4 = st.columns(4)
 
@@ -240,3 +240,6 @@ Women: Waist circumference below 35 inches (88 cm) is considered lower risk
 Another useful metric is the waist-to-height ratio (WHtR): keeping your waist less than half your height (ratio under 0.50) is associated with lower health risks 
 
 .""")
+side=st.sidebar
+with side:
+  st.write("BMI")
