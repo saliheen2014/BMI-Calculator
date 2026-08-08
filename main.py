@@ -1,9 +1,63 @@
 import streamlit as st
 
+# ============================
+# 🎨 GLOBAL THEME CONTROLLER
+# ============================
+
+with st.sidebar:
+    st.header("🎛 Theme Controller")
+
+    theme = st.selectbox(
+        "Choose a theme:",
+        ["Default", "Light", "Dark", "Ocean Blue", "Forest Green", "Custom Color"]
+    )
+
+    if theme == "Light":
+        bg = "#FFFFFF"
+        text = "black"
+
+    elif theme == "Dark":
+        bg = "#000000"
+        text = "white"
+
+    elif theme == "Ocean Blue":
+        bg = "#D0E8FF"
+        text = "black"
+
+    elif theme == "Forest Green":
+        bg = "#DFFFE0"
+        text = "black"
+
+    elif theme == "Custom Color":
+        bg = st.color_picker("Pick a background color", "#F5F5F5")
+        text = "black"
+
+    else:
+        bg = "#F5F5F5"
+        text = "black"
+
+# Apply theme globally
+st.markdown(
+    f"""
+    <style>
+        body {{
+            background-color: {bg};
+            color: {text};
+        }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# ============================
+# MAIN APP
+# ============================
+
 side = st.sidebar
 with side:
-    options = st.radio(" ", ["Bmi", "Calculator","Background Color"])
+    options = st.radio("Choose section:", ["Bmi", "Calculator", "Background Color"])
 
+# -------------------- BMI SECTION --------------------
 if options == "Bmi":
     tab1, tab2 = st.tabs(["Home 🏠", "Calculate Bmi 💪"])
 
@@ -19,29 +73,19 @@ if options == "Bmi":
             </div>
         """, unsafe_allow_html=True)
 
-        st.markdown("""
-        <style>
-        body {
-            background-color: #f5f5f5;
-        }
-        </style>
-        """, unsafe_allow_html=True)
-
         col_1, col_2 = st.columns(2)
 
         with col_1:
-            options = st.selectbox("Convert:",
-                                   {'feet', 'lbs'})
-            number = st.number_input("")
+            options = st.selectbox("Convert:", {'feet', 'lbs'})
+            number = st.number_input("Enter value:", label_visibility="collapsed")
             number = float(number)
 
         with col_2:
-            options_2 = st.selectbox('To:',
-                                     {'meters', 'kg'})
+            options_2 = st.selectbox('To:', {'meters', 'kg'})
 
         if options == "feet" and options_2 == "meters":
             length = number * 0.3048
-            answer = st.write("Result", round(length, 3))
+            st.write("Result", round(length, 3))
 
         if options == "lbs" and options_2 == "kg":
             weight = number * 0.45359237
@@ -65,7 +109,7 @@ if options == "Bmi":
                 w = float(Weight)
                 bmi = w / (h ** 2)
 
-                if btn_2 == True:
+                if btn_2:
                     st.write("BMI:", round(bmi, 2))
 
                 if bmi < 18.5:
@@ -107,14 +151,6 @@ if options == "Bmi":
             </div>
         """, unsafe_allow_html=True)
 
-        st.markdown("""
-        <style>
-        body {
-            background-color: #f5f5f5;
-        }
-        </style>
-        """, unsafe_allow_html=True)
-
         st.title("What’s your Body Mass Index (BMI)?")
         st.header("Are you within a healthy weight range for your height?")
 
@@ -126,50 +162,25 @@ if options == "Bmi":
         st.subheader("How to Calculate BMI?")
         st.markdown("""
         The Body Mass Index is a quick and simple screening tool that relates your weight to your height. 
-        While it has limitations and doesn’t measure body fat directly, it’s often used by healthcare professionals to broadly categorize a person’s weight and potential health risks.
-        You can calculate BMI using either the Metric System or the Imperial System (US Units).
         """)
 
         st.subheader("Metric BMI Formula")
-        st.markdown("""
-        The metric formula is the standard way to calculate BMI: Weight/height/square. It is the formula that we use.
-        """)
+        st.markdown("Weight / height²")
 
         st.header("Waist Measurement")
         st.markdown("""
-        Waist measurement (waist circumference) is also important to consider alongside your BMI.
-        Waist measurement can help to assess risk by measuring the amount of fat carried around your middle.
+        Waist measurement is also important to consider alongside your BMI.
         """)
 
         st.subheader("How to Measure your Waist")
         st.markdown("""
-        Find the top of your hip bone and the bottom of your ribs. 
-        Breathe out normally.
-        Place the tape measure midway between these points, in line with your belly button, and wrap it around your waist loose enough to fit one finger inside the tape.
-        Check your measurement.
+        • Find the top of your hip bone  
+        • Breathe out normally  
+        • Place the tape measure midway  
+        • Wrap it around your waist  
         """)
 
-        st.markdown("""
-        Health Significance  
-        Waist circumference reflects abdominal fat, including visceral fat, which surrounds internal organs and is metabolically active. High levels of visceral fat are linked to:
-
-        - Increased risk of type 2 diabetes  
-        - High blood pressure  
-        - High cholesterol  
-        - Heart disease  
-        - Fatty liver disease  
-
-        Even individuals with a normal BMI can have elevated health risks if their waist circumference is high.
-        """)
-
-        st.markdown("""
-        Healthy Waist Guidelines  
-        Men: Waist circumference below 40 inches (102 cm)  
-        Women: Waist circumference below 35 inches (88 cm)  
-
-        Waist-to-height ratio (WHtR): keeping your waist less than half your height (ratio under 0.50) is associated with lower health risks.
-        """)
-
+# -------------------- CALCULATOR SECTION --------------------
 if options == "Calculator":
 
     st.set_page_config(page_title="Calculator 📅")
@@ -218,54 +229,7 @@ if options == "Calculator":
 
     if button_pi:
         st.success(f"Result: {first_number * 3.1415926535}")
-if options=="Background Color":
 
-
-# ============================
-# 🎨 GLOBAL THEME CONTROLLER
-# ============================
-
-
-    st.header("🎛 Theme Controller")
-
-    theme = st.selectbox(
-        "Choose a theme:",
-        ["Default", "Light", "Dark", "Ocean Blue", "Forest Green", "Custom Color"]
-    )
-
-    if theme == "Light":
-        bg = "#FFFFFF"
-        text = "black"
-
-    elif theme == "Dark":
-        bg = "#000000"
-        text = "white"
-
-    elif theme == "Ocean Blue":
-        bg = "#D0E8FF"
-        text = "black"
-
-    elif theme == "Forest Green":
-        bg = "#DFFFE0"
-        text = "black"
-
-    elif theme == "Custom Color":
-        bg = st.color_picker("Pick a background color", "#F5F5F5")
-        text = "black"
-
-    else:
-        bg = "#F5F5F5"
-        text = "black"
-
-# Apply theme globally
-st.markdown(
-    f"""
-    <style>
-        body {{
-            background-color: {bg};
-            color: {text};
-        }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# -------------------- BACKGROUND COLOR SECTION --------------------
+if options == "Background Color":
+    st.write("Use the sidebar to change the background color.")
