@@ -219,7 +219,7 @@ if options == "Calculator":
     if button_pi:
         st.success(f"Result: {first_number * 3.1415926535}")
 if options=="Background Color":
-    st.sidebar.markdown(# 🎨 Universal Background Color Picker
+    st.sidebar.markdown(# 🎨 Universal Background Color Picker) 
 bg_color = st.color_picker("Pick a background color", "#F5F5F5")
 
 st.sidebar.markdown(
