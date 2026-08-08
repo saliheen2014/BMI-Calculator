@@ -69,7 +69,7 @@ body {
             st.write("UNDERWEIGHT")
             st.write("Eat more")
 
-        elif 18.5 <= bmi <= 24.9 and gender=="male" and width<94:
+        elif 18.5 <= bmi <= 24.9 and gender=="male" and width<h/2:
             st.write( "You are healthy")
             st.markdown("Continue the good work 😂")
 
