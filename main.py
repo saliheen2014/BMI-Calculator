@@ -220,7 +220,8 @@ if options == "Calculator":
         st.success(f"Result: {first_number * 3.1415926535}")
 if options=="Background Color":
 
-    st.sidebar.header("🎛 Theme Controller")
+
+    st.header("🎛 Theme Controller")
 
     theme = st.selectbox(
         "Choose a theme:",
@@ -244,14 +245,14 @@ if options=="Background Color":
         text = "black"
 
     elif theme == "Custom Color":
-        bg = st.color_picker("Pick any background color", "#F5F5F5")
+        bg = st.color_picker("Pick a background color", "#F5F5F5")
         text = "black"
 
     else:
         bg = "#F5F5F5"
         text = "black"
 
-# Apply theme
+# IMPORTANT: CSS must come AFTER bg is defined
 st.markdown(
     f"""
     <style>
