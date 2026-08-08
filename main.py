@@ -1,5 +1,5 @@
 import streamlit as st
-tab1,tab2,tab3=st.tabs(["Home 🏠","Calculate Bmi 💪","Calculator"])
+tab1,tab2,tab3=st.tabs(["Home 🏠","Calculate Bmi 💪","Calculator 📅"])
 with tab2:
  
 
