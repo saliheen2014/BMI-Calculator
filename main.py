@@ -1,10 +1,14 @@
 import streamlit as st
-tab1,tab2,tab3=st.tabs(["Home 🏠","Calculate Bmi 💪","Calculator 📅"])
-with tab2:
+side=st.sidebar
+with side:
+  options=st.radio(" ",["Bmi","Calculator"])
+  if options=="Bmi":
+ tab1,tab2=st.tabs(["Home 🏠","Calculate Bmi 💪"])
+ with tab2:
  
 
- st.set_page_config(page_title="BMI CALCULATOR 💪🏼",)
- st.markdown("""
+  st.set_page_config(page_title="BMI CALCULATOR 💪🏼",)
+  st.markdown("""
     <div style="background-color:#2E8B57;padding:20px;border-radius:10px;margin-bottom:20px;">
         <h1 style="color:white;text-align:center;">BMI Calculator</h1>
         <p style="color:white;text-align:center;">
@@ -15,7 +19,7 @@ with tab2:
 
  
 
- st.markdown("""
+  st.markdown("""
 <style>
 body {
     background-color: #f5f5f5;
@@ -25,14 +29,14 @@ body {
 
  
 
- col_1,col_2,=st.columns(2)
- with col_1:
+  col_1,col_2,=st.columns(2)
+  with col_1:
     options=st.selectbox("Convert:",
                      {'feet','lbs'})
     number=st.number_input("") 
     number=float(number)
     
- with col_2:
+  with col_2:
     options_2=st.selectbox('To:',
                            {'meters','kg',})
      
@@ -93,7 +97,7 @@ body {
 
     except ValueError:
         st.error("Please enter valid numbers for height and weight.")
-with tab3:
+ if options=="Calculator":
    st.set_page_config(page_title="Calculator 📅 ")
    st.title("Calculator 📅")
   
@@ -145,7 +149,7 @@ with tab3:
 
    if button_pi:
         st.success(f"Result: {first_number * 3.1415926535}")
-with tab1:
+
    with tab1:
     st.markdown("""
         <div style="background-color:#4CAF50;padding:20px;border-radius:10px;">
@@ -242,4 +246,4 @@ Another useful metric is the waist-to-height ratio (WHtR): keeping your waist le
 .""")
 side=st.sidebar
 with side:
-  st.write("BMI")
+  options=st.radio(" ",["Bmi","Calculator"])
