@@ -156,21 +156,16 @@ if options == "Bmi":
 
         st.markdown("""
         BMI is calculated using your weight and height (your weight divided by your height squared).
-        Along with several other factors, like your blood pressure and cholesterol, BMI can help estimate your risk of a heart attack or stroke.
         """)
 
         st.subheader("How to Calculate BMI?")
-        st.markdown("""
-        The Body Mass Index is a quick and simple screening tool that relates your weight to your height. 
-        """)
+        st.markdown("The Body Mass Index is a quick screening tool.")
 
         st.subheader("Metric BMI Formula")
         st.markdown("Weight / height²")
 
         st.header("Waist Measurement")
-        st.markdown("""
-        Waist measurement is also important to consider alongside your BMI.
-        """)
+        st.markdown("Waist measurement is also important.")
 
         st.subheader("How to Measure your Waist")
         st.markdown("""
