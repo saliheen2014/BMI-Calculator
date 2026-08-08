@@ -221,6 +221,11 @@ if options == "Calculator":
 if options=="Background Color":
 
 
+# ============================
+# 🎨 GLOBAL THEME CONTROLLER
+# ============================
+
+
     st.header("🎛 Theme Controller")
 
     theme = st.selectbox(
@@ -252,7 +257,7 @@ if options=="Background Color":
         bg = "#F5F5F5"
         text = "black"
 
-# IMPORTANT: CSS must come AFTER bg is defined
+# Apply theme globally
 st.markdown(
     f"""
     <style>
