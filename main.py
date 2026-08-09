@@ -160,17 +160,17 @@ if options == "Bmi":
         """, unsafe_allow_html=True)
 
         st.title("What’s your Body Mass Index (BMI)?")
-    st.header("Are you within a healthy weight range for your height?")
+        st.header("Are you within a healthy weight range for your height?")
 
    
 
-   st.markdown("""
+       st.markdown("""
     BMI is calculated using your weight and height (your weight divided by your height squared).
     Along with other factors like blood pressure and cholesterol, BMI helps estimate your risk of heart disease, stroke, and diabetes.
     """)
 
-   st.subheader("How to Calculate BMI")
-   st.markdown("""
+       st.subheader("How to Calculate BMI")
+       st.markdown("""
     The Body Mass Index is a quick screening tool that relates your weight to your height.
     While it doesn’t measure body fat directly, it’s widely used by healthcare professionals. 
     To calculate BMI, this is the formula that we use, Weight/height**2 
@@ -179,23 +179,23 @@ if options == "Bmi":
    
     
 
-   st.subheader("Waist Measurement")
-   st.markdown("""
+     st.subheader("Waist Measurement")
+     st.markdown("""
     Waist measurement is also important. It helps assess how much fat is carried around your abdomen — a major risk factor for heart disease.
     """)
 
   
     
 
-   st.subheader("How to Measure Your Waist")
-   st.markdown("""
+    st.subheader("How to Measure Your Waist")
+    st.markdown("""
     • Find the top of your hip bone and the bottom of your ribs  
     • Breathe out normally  
     • Place the tape measure midway between these points  
     • Wrap it around your waist (loose enough for one finger)  
     • Read your measurement  
     """)
-   st.markdown("""
+    st.markdown("""
 
 
 
@@ -214,21 +214,8 @@ Waist circumference reflects abdominal fat, including visceral fat, which surrou
 Even individuals with a normal BMI can have elevated health risks if their waist circumference is high. 
 
 """)
-   st.markdown("""
-
-Health Significance
-Waist circumference reflects abdominal fat, including visceral fat, which surrounds internal organs and is metabolically active. High levels of visceral fat are linked to:
-
-Increased risk of type 2 diabetes
-High blood pressure
-High cholesterol
-Heart disease
-Fatty liver disease 
-WebMD
-WebMD
-+2
-
-Even individuals with a normal BMI can have elevated health risks if their waist circumference is high 
+  
+ st.markdown("""
 
 Healthy Waist Guidelines
 While exact healthy waist sizes vary by sex, height, and ethnicity, general guidelines include:
