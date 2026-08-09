@@ -120,8 +120,8 @@ if options == "Bmi":
                       st.write("Eat more")
                 
                     elif bmi>18.5 and bmi<24.9 and gender == "Male" and width < h / 2:
-                     st.write("You are healthy")
-                     st.markdown("Continue the good work 😂")
+                      st.write("You are healthy")
+                      st.markdown("Continue the good work 😂")
                     elif bmi>18.5 and bmi<24.9 and gender == "Female" and width < h / 2:   
                      st.write("You are healthy")
                      st.markdown("Continue the good work 😂")
