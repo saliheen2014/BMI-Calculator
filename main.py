@@ -106,7 +106,7 @@ if options == "Bmi":
 
         btn_2 = st.button("Calculate")
 
-        if Height and Weight and width:
+        if Height and Weight :
             try:
                 h = float(Height)
                 w = float(Weight)
