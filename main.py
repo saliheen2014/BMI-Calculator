@@ -197,8 +197,7 @@ with tab1:
     -High cholesterol  
     -Heart disease  
     -Fatty liver disease  
-    -WebMD  
-    -WebMD  
+   
 
     Even individuals with a normal BMI can have elevated health risks if their waist circumference is high. 
     """)
