@@ -119,7 +119,10 @@ if options == "Bmi":
                     st.write("UNDERWEIGHT")
                     st.write("Eat more")
 
-                elif 18.5 <= bmi <= 24.9 and gender == "male" and width < h / 2:
+                elif 18.5 <= bmi <= 24.9 and gender == "Male" and width < h / 2:
+                    st.write("You are healthy")
+                    st.markdown("Continue the good work 😂")
+                elif 18.5 <= bmi <= 24.9 and gender == "Female" and width < h / 2:   
                     st.write("You are healthy")
                     st.markdown("Continue the good work 😂")
 
@@ -130,12 +133,12 @@ if options == "Bmi":
                     st.write("OBESITY")
                     st.write("Your health is greatly at risk")
                     st.write("Lose a lot of weight, and reduce belly fat.")
-
-                elif bmi >= 30 and gender == "Female" and width > 80:
+                  
+                elif bmi >= 30 and gender=="Female" and width > 80:
                     st.write("Obesity")
                     st.write("Your health is greatly at risk.")
                     st.write("Lose a lot of weight, and reduce belly fat.")
-
+                 
                 elif bmi >= 30:
                     st.write("Obesity")
                     st.write("Lose a lot of weight.")
