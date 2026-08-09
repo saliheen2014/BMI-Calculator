@@ -169,8 +169,8 @@ if options == "Bmi":
     Along with other factors like blood pressure and cholesterol, BMI helps estimate your risk of heart disease, stroke, and diabetes.
     """)
 
-       st.subheader("How to Calculate BMI")
-       st.markdown("""
+        st.subheader("How to Calculate BMI")
+        st.markdown("""
     The Body Mass Index is a quick screening tool that relates your weight to your height.
     While it doesn’t measure body fat directly, it’s widely used by healthcare professionals. 
     To calculate BMI, this is the formula that we use, Weight/height**2 
@@ -179,23 +179,23 @@ if options == "Bmi":
    
     
 
-     st.subheader("Waist Measurement")
-     st.markdown("""
+      st.subheader("Waist Measurement")
+      st.markdown("""
     Waist measurement is also important. It helps assess how much fat is carried around your abdomen — a major risk factor for heart disease.
     """)
 
   
     
 
-    st.subheader("How to Measure Your Waist")
-    st.markdown("""
+     st.subheader("How to Measure Your Waist")
+     st.markdown("""
     • Find the top of your hip bone and the bottom of your ribs  
     • Breathe out normally  
     • Place the tape measure midway between these points  
     • Wrap it around your waist (loose enough for one finger)  
     • Read your measurement  
     """)
-    st.markdown("""
+     st.markdown("""
 
 
 
