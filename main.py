@@ -118,6 +118,8 @@ if options == "Bmi":
                     if bmi < 18.5:
                       st.write("UNDERWEIGHT")
                       st.write("Eat more")
+                      st.write("Press this to learn more.")
+                      st.markdown("https://www.healthline.com/nutrition/18-foods-to-gain-weight")
                 
                     elif bmi>18.5 and bmi<24.9 and gender == "Male" and width < h / 2:
                       st.write("You are healthy")
