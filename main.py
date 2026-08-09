@@ -112,39 +112,39 @@ if options == "Bmi":
                 w = float(Weight)
                 bmi = w / (h ** 2)
 
-                if btn_2:
+                if btn_2==True:
                     st.write("BMI:", round(bmi, 2))
 
-                if bmi < 18.5:
-                    st.write("UNDERWEIGHT")
-                    st.write("Eat more")
+                    if bmi < 18.5:
+                      st.write("UNDERWEIGHT")
+                      st.write("Eat more")
                 
-                elif bmi>18.5 and bmi<24.9 and gender == "Male" and width < h / 2:
-                    st.write("You are healthy")
-                    st.markdown("Continue the good work 😂")
-                elif bmi>18.5 and bmi<24.9 and gender == "Female" and width < h / 2:   
-                    st.write("You are healthy")
-                    st.markdown("Continue the good work 😂")
+                    elif bmi>18.5 and bmi<24.9 and gender == "Male" and width < h / 2:
+                     st.write("You are healthy")
+                     st.markdown("Continue the good work 😂")
+                    elif bmi>18.5 and bmi<24.9 and gender == "Female" and width < h / 2:   
+                     st.write("You are healthy")
+                     st.markdown("Continue the good work 😂")
 
-                elif bmi>24.9 and bmi<30:
-                    st.write("OVERWEIGHT")
+                    elif bmi>24.9 and bmi<30:
+                     st.write("OVERWEIGHT")
 
-                elif bmi >= 30 and gender == "Male" and width > 94:
-                    st.write("OBESITY")
-                    st.write("Your health is greatly at risk")
-                    st.write("Lose a lot of weight, and reduce belly fat.")
+                    elif bmi >= 30 and gender == "Male" and width > 94:
+                     st.write("OBESITY")
+                     st.write("Your health is greatly at risk")
+                     st.write("Lose a lot of weight, and reduce belly fat.")
                   
-                elif bmi >= 30 and gender=="Female" and width > 80:
-                    st.write("Obesity")
-                    st.write("Your health is greatly at risk.")
-                    st.write("Lose a lot of weight, and reduce belly fat.")
+                    elif bmi >= 30 and gender=="Female" and width > 80:
+                      st.write("Obesity")
+                      st.write("Your health is greatly at risk.")
+                      st.write("Lose a lot of weight, and reduce belly fat.")
                  
-                elif bmi >= 30:
-                    st.write("Obesity")
-                    st.write("Lose a lot of weight.")
+                    elif bmi >= 30:
+                      st.write("Obesity")
+                      st.write("Lose a lot of weight.")
 
-                bmi_rounded = round(bmi)
-                st.slider("BMI", min_value=10, max_value=40, value=bmi_rounded)
+                    bmi_rounded = round(bmi)
+                    st.slider("BMI", min_value=10, max_value=40, value=bmi_rounded)
 
             except ValueError:
                 st.error("Please enter valid numbers for height and weight.")
