@@ -126,7 +126,7 @@ if options == "Bmi":
                     st.write("You are healthy")
                     st.markdown("Continue the good work 😂")
 
-                elif 25 <= bmi <= 29.9:
+                elif bmi>24.9 and bmi<30:
                     st.write("OVERWEIGHT")
 
                 elif bmi >= 30 and gender == "Male" and width > 94:
