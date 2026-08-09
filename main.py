@@ -164,7 +164,7 @@ if options == "Bmi":
 
    
 
-       st.markdown("""
+        st.markdown("""
     BMI is calculated using your weight and height (your weight divided by your height squared).
     Along with other factors like blood pressure and cholesterol, BMI helps estimate your risk of heart disease, stroke, and diabetes.
     """)
