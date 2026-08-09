@@ -102,11 +102,11 @@ if options == "Bmi":
         with cols[1]:
             Weight = st.number_input("Enter weight in kg")
         with cols[2]:
-            width = st.number_input("Enter waist measurement. Optional.")
+            width = st.number_input(" Optional. Enter waist measurement.")
 
         btn_2 = st.button("Calculate")
 
-        if Height and Weight:
+        if Height and Weight and width:
             try:
                 h = float(Height)
                 w = float(Weight)
