@@ -151,7 +151,7 @@ if options == "Bmi":
             except ValueError:
                 st.error("Please enter valid numbers for height and weight.")
 
-with tab1:
+ with tab1:
     st.markdown("""
         <div style="background-color:#4CAF50;padding:20px;border-radius:10px;">
             <h1 style="color:white;text-align:center;">BMI & Health Checker</h1>
@@ -214,7 +214,7 @@ with tab1:
 
 
 # -------------------- CALCULATOR SECTION --------------------
- if options == "Calculator":
+if options == "Calculator":
 
     st.set_page_config(page_title="Calculator 📅")
     st.title("Calculator 📅")
