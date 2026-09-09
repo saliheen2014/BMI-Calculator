@@ -214,7 +214,7 @@ with tab1:
 
 
 # -------------------- CALCULATOR SECTION --------------------
-if options == "Calculator":
+ if options == "Calculator":
 
     st.set_page_config(page_title="Calculator 📅")
     st.title("Calculator 📅")
