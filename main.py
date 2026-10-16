@@ -105,7 +105,7 @@ if options == "Bmi":
 # -------------------- CALCULATOR SECTION --------------------
 elif options == "Calculator":
     st.header("🧮 Calculator Section")
-    x=number_input("Enter number", value=0,step=1)
+    x=number_input("Enter number")
     if x !=0:
         st.write("Result: ",eval(x))
 
