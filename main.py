@@ -91,9 +91,9 @@ if options == "Bmi":
 
         with col_2:
             if unit_system == "Metric (kg / cm)":
-                weight = st.number_input("Weight (kg):", min_value=1.0, value=70.0)
-                height = st.number_input("Height (cm):", min_value=1.0, value=170.0)
-                bmi = weight / ((height / 100) ** 2) if height > 0 else 0
+                weight = st.number_input("Weight (kg):",step=1)
+                height = st.number_input("Height (m):",step=1)
+                bmi = weight / ((height) ** 2) if height > 0 else 0
             else:
                 weight = st.number_input("Weight (lbs):", min_value=1.0, value=150.0)
                 height = st.number_input("Height (inches):", min_value=1.0, value=67.0)
@@ -105,7 +105,9 @@ if options == "Bmi":
 # -------------------- CALCULATOR SECTION --------------------
 elif options == "Calculator":
     st.header("🧮 Calculator Section")
-    st.write("Calculator features go here.")
+    x=number_input("Enter number", value=0,step=1)
+    if x !=0:
+        st.write("Result: ",eval(x))
 
 # -------------------- BACKGROUND COLOR SECTION --------------------
 elif options == "Background Color":
