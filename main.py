@@ -216,7 +216,10 @@ if options == "Bmi":
 
 # -------------------- CALCULATOR SECTION --------------------
 if options == "Calculator":
-
-  x=eval(st.text_input("Enter numbers"))
-  if x:
+    st.title("Calculator")
+    try:
+     x=eval(st.text_input("Enter numbers"))
+     if x:
        st.write(x)
+    except Exception as e:
+        st.toast(e)
