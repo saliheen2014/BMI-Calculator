@@ -217,6 +217,6 @@ if options == "Bmi":
 # -------------------- CALCULATOR SECTION --------------------
 if options == "Calculator":
 
-    x=eval(st.text_input("Enter numbers")
-    if x:
+  x=eval(st.text_input("Enter numbers"))
+  if x:
        st.write(x)
