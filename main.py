@@ -59,7 +59,7 @@ st.markdown(
 
 side = st.sidebar
 with side:
-    options = st.radio("Choose section:", ["Bmi", "Calculator", "Background Color"])
+    options = st.radio("Choose section:", ["Bmi", "Calculator"])
 
 # -------------------- BMI SECTION --------------------
 if options == "Bmi":
@@ -152,8 +152,8 @@ if options == "Bmi":
             except ValueError:
                 st.error("Please enter valid numbers for height and weight.")
 
-with tab1:
-    st.markdown("""
+    with tab1:
+     st.markdown("""
         <div style="background-color:#4CAF50;padding:20px;border-radius:10px;">
             <h1 style="color:white;text-align:center;">BMI & Health Checker</h1>
             <p style="color:white;text-align:center;">Track your BMI, waist measurement, and overall health</p>
